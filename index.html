@@ -1,0 +1,43 @@
+<?php
+	session_start();
+?>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Registration system </title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+	$(document).ready(function(){
+		$.get("newProcess.php",function(data){
+			$("#net").html(data);
+		}, "html"
+		);
+	});
+	</script>	
+</head>
+<body>
+		<div class="header">
+			<h2>Telegram User</h2>
+		</div>
+		<form class="" action="media.php">
+			<button type="submit" class="media_btn" id="media_btn" name="log">Media</button>
+		</form>
+		<div class="container">
+
+		<div>
+			<h2 align="center">Table</h2>
+		</div>
+		
+		<!--<form class="" method="POST">
+				<button type="submit" name="name_sort" id="name_sort" class="btn" value="1">SORT</button>
+		</form>-->
+
+		<div id="net"></div>
+		<br>
+		<a href="Logout.php"> Log out</a>
+		</div>
+</body>
+</html>
